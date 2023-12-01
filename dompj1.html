@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD friends</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./images.jpeg">
+            <h3>Angel_01</h3>
+
+            <h4> Stranger</h4>
+            <div class="container">
+                <button class="btn btn-primary"> Add Friend</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var buttons = document.querySelector(".btn")
+        var text = document.querySelector("h4")
+        var count = 1
+        buttons.addEventListener("click", function () {
+            if (count === 1) {
+                text.innerHTML = "Friends"
+                text.style.color = "green"
+                buttons.innerHTML = "Unfriend"
+                count = 0
+            }
+            else {
+                text.innerHTML = "Stranger"
+                text.style.color = "red"
+                buttons.innerHTML = "Add Friend"
+                count = 1
+            }
+        })
+    </script>
+</body>
+
+</html>
