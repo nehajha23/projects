@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./pj.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="cursor">
+
+        </div>
+        <h1> DOM PROJECT</h1>
+    </div>
+    <script>
+        var a = document.querySelector(".main")
+        var b = document.querySelector(".cursor")
+        a.addEventListener("mousemove", function (move) {
+
+            b.style.left = move.x + "px"
+            b.style.top = move.y + "px"
+        })
+    </script>
+</body>
+
+</html>

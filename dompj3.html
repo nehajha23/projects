@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./pj3.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="elem">
+            <h1>HTML
+            </h1>
+            <img src="./download (1).jpeg">
+        </div>
+        <div class="elem">
+            <h1>CSS
+            </h1>
+            <img src="./download.jpeg">
+        </div>
+        <div class="elem">
+            <h1>JAVASCRIPT
+            </h1>
+            <img src="./tree-736885_1280.jpg">
+        </div>
+    </div>
+    <script>
+        var elem1 = document.querySelectorAll(".elem")
+        elem1.forEach(function (val) {
+            val.addEventListener("mouseenter", function () {
+                val.childNodes[3].style.opacity = 1
+            })
+            val.addEventListener("mouseleave", function () {
+                val.childNodes[3].style.opacity = 0
+            })
+            val.addEventListener("mouseleave", function (dets) {
+                val.childNodes[3].style.left = dets.x + "px"
+                val.childNodes[3].style.top = dets.y + "px"
+            })
+        })
+
+    </script>
+</body>
+
+</html>
